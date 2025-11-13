@@ -3,7 +3,7 @@ import express from "express";
 
 const host = "0.0.0.0";
 const porta = 3000;
-var listaCNPJs = [];
+var listaUsuarios = [];
 
 const server = express();
 
@@ -177,8 +177,8 @@ server.post('/adicionarCNPJ', (requisicao, resposta) => {
 
     if (nome && end && CNPJ && cidade && uf && cep && email){
 
-        listaCNPJs.push({nome, CNPJ, cidade, uf, cep, email, telefone, end});
-        resposta.redirect("/listarCNPJs");
+        listaUsuarios.push({nome, CNPJ, cidade, uf, cep, email, telefone, end});
+        resposta.redirect("/listarUsuarios");
     }
     else{
 
