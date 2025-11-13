@@ -65,7 +65,7 @@ server.get("/", (requisicao, resposta) => {
         </html>
     `);
 });
-server.get("/cadastroCNPJ", (requisicao,resposta) => {
+server.get("/cadastrousuario", (requisicao,resposta) => {
     resposta.send(`
         <DOCTYPE html>
         <html>
@@ -77,7 +77,7 @@ server.get("/cadastroCNPJ", (requisicao,resposta) => {
             <body>
                 <div class="container">
                     <h1 class="text-center border m-3 p-3 bg-light">Cadastro de Fornecedor</h1>
-                    <form method="POST" action="/adicionarCNPJ" class="row g-3 m-3 p-3 bg-light">
+                    <form method="POST" action="/adicionarusuario" class="row g-3 m-3 p-3 bg-light">
                             <div class="col-md-4">
                                 <label for="nome" class="form-label">Nome</label>
 
@@ -165,7 +165,7 @@ server.get("/cadastroCNPJ", (requisicao,resposta) => {
     `);
 })
 
-server.post('/adicionarCNPJ', (requisicao, resposta) => {
+server.post('/adicionarusuario', (requisicao, resposta) => {
     const nome = requisicao.body.nome;
     const CNPJ = requisicao.body.CNPJ;
     const cidade = requisicao.body.cidade;
@@ -194,7 +194,7 @@ server.post('/adicionarCNPJ', (requisicao, resposta) => {
             <body>
                 <div class="container">
                     <h1 class="text-center border m-3 p-3 bg-light">Cadastro de Fornecedor</h1>
-                    <form method="POST" action="/adicionarCNPJ" class="row g-3 m-3 p-3 bg-light">
+                    <form method="POST" action="/adicionarusuario" class="row g-3 m-3 p-3 bg-light">
                             <div class="col-md-4">
                                 <label for="nome" class="form-label">Nome</label>
                                 <!-- O atributo 'id' identifica um elemento HTML na página para o navegador -->
